@@ -1,0 +1,867 @@
+QN:1
+Cricket World Cup Qualifier
+The cricket World Cup has started in Chefland. There are many teams participating in the group stage matches. Any team that scores 
+12
+12 or more points in the group stage matches qualifies for the next stage.
+
+You know the score that a particular team has scored in the group stage matches. Determine if the team has qualified for the next stage or not.
+
+Input Format
+The first and only line of input consists of an integer 
+𝑋
+X denoting the total points scored by the given team in the group stage matches.
+
+Output Format
+Output Yes, if the team has qualified for the next stage, and No otherwise.
+
+You may print each character of the string in uppercase or lowercase (for example, the strings YES, yEs, yes, and yeS will all be treated as identical).
+
+Constraints
+1
+≤
+𝑋
+≤
+20
+1≤X≤20
+Sample 1:
+Input
+Output
+3
+No
+Explanation:
+The team has not scored 
+≥
+12
+≥12 points. Hence it does not qualify.
+
+Sample 2:
+Input
+Output
+17
+Yes
+Explanation:
+The team has scored 
+≥
+12
+≥12 points. Hence it does qualify.
+
+ANS
+X = int(input())
+if(X >= 12):
+    print("Yes")
+else:
+    print("No")
+
+QN:2
+Lucky Seven
+Chef considers the number 
+7
+7 lucky. As a result, he believes that the 
+7
+7-th letter he sees on a day is his lucky letter of the day.
+
+You are given a string 
+𝑆
+S of length 
+10
+10, denoting the first 
+10
+10 letters Chef saw today.
+What is Chef's lucky letter?
+
+Input Format
+The only line of input contains a string 
+𝑆
+S, of length 
+10
+10.
+Output Format
+Print a single character: Chef's lucky letter .
+Constraints
+𝑆
+S has a length of 
+10
+10
+𝑆
+S contains only lowercase Latin letters (i.e, the characters 'a' to 'z')
+Sample 1:
+Input
+Output
+proceeding
+d
+Explanation:
+The 
+7
+7-th character of 
+"proceeding"
+"proceeding" is 'd', and hence that is Chef's lucky letter.
+
+Sample 2:
+Input
+Output
+outofsight
+i
+Explanation:
+The 
+7
+7-th character of 
+"outofsight"
+"outofsight" is 'i', and hence that is Chef's lucky letter.
+
+ANS:
+s = input()
+print(s[6])
+
+QN:3
+Clear Day
+Chef classifies a day to be either rainy, cloudy, or clear.
+
+In a particular week, Chef finds 
+𝑋
+X days to be rainy and 
+𝑌
+Y days to be cloudy.
+Find the number of clear days in the week.
+
+Input Format
+The first and only line of input will contain two space-separated integers 
+𝑋
+X and 
+𝑌
+Y, denoting the number of rainy and cloudy days in the week.
+Output Format
+Output the number of clear days in the week.
+
+Constraints
+0
+≤
+𝑋
+,
+𝑌
+≤
+7
+0≤X,Y≤7
+0
+≤
+𝑋
++
+𝑌
+≤
+7
+0≤X+Y≤7
+Sample 1:
+Input
+Output
+2 3
+2
+Explanation:
+There are 
+7
+7 days in a week. If there are 
+2
+2 rainy days and 
+3
+3 cloudy days, then the remaining 
+7
+−
+2
+−
+3
+=
+2
+7−2−3=2 days are clear.
+
+Sample 2:
+Input
+Output
+3 4
+0
+Explanation:
+If there are 
+3
+3 rainy days and 
+4
+4 cloudy days, then the remaining 
+7
+−
+3
+−
+4
+=
+0
+7−3−4=0 days are clear.
+
+ANS:
+x,y=map(int,input().split())
+print(7-(x+y))
+
+QN:4
+Double Rent
+Chefina decided to move into Chef's apartment.
+Chef was initially paying a rent of 
+𝑋
+X rupees. Since Chefina is moving in, the owner decided to double the rent.
+
+Find the final rent Chef needs to pay.
+
+Input Format
+The input consists of a single integer 
+𝑋
+X, denoting the rent Chef was initially paying.
+
+Output Format
+Output on a new line, the final rent Chef needs to pay.
+
+Constraints
+1
+≤
+𝑋
+≤
+10
+1≤X≤10
+Sample 1:
+Input
+Output
+2
+4
+Explanation:
+Chef was initially paying 
+2
+2 rupees. After Chefina moves in, he needs to pay 
+2
+⋅
+2
+=
+4
+2⋅2=4 rupees.
+
+Sample 2:
+Input
+Output
+3
+6
+Explanation:
+Chef was initially paying 
+3
+3 rupees. After Chefina moves in, he needs to pay 
+2
+⋅
+3
+=
+6
+2⋅3=6 rupees.
+
+Sample 3:
+Input
+Output
+10
+20
+Explanation:
+Chef was initially paying 
+10
+10 rupees. After Chefina moves in, he needs to pay 
+2
+⋅
+10
+=
+20
+2⋅10=20 rupees.
+ANS:
+x=int(input())
+print(2*x)
+QN:5
+Saving Taxes
+In Chefland, everyone who earns strictly more than 
+𝑌
+Y rupees per year, has to pay a tax to Chef. Chef has allowed a special scheme where you can invest any amount of money and claim exemption for it.
+
+You have earned 
+𝑋
+X 
+(
+𝑋
+>
+𝑌
+)
+(X>Y) rupees this year. Find the minimum amount of money you have to invest so that you don't have to pay taxes this year.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of a single line of input consisting of two space separated integers 
+𝑋
+X and 
+𝑌
+Y denoting the amount you earned and the amount above which you will have to pay taxes.
+Output Format
+For each test case, output a single integer, denoting the minimum amount you need to invest.
+
+Constraints
+1
+≤
+𝑇
+≤
+100
+1≤T≤100
+1
+≤
+𝑌
+<
+𝑋
+≤
+100
+1≤Y<X≤100
+Sample 1:
+Input
+Output
+4
+4 2
+8 7
+5 1
+2 1
+2
+1
+4
+1
+Explanation:
+Test case 
+1
+1: The amount above which you will have to pay taxes is 
+2
+2. Since you earn 
+4
+4 rupees, you need to invest at least 
+2
+2 rupees. After investing 
+2
+2 rupees, you will remain with an effective income 
+4
+−
+2
+=
+2
+4−2=2 rupees which will not be taxed.
+
+Test case 
+2
+2: The amount above which you will have to pay taxes is 
+7
+7. Since you earn 
+8
+8 rupees, you need to invest at least 
+1
+1 rupees.
+
+Test case 
+3
+3: The amount above which you will have to pay taxes is 
+1
+1. Since you earn 
+5
+5 rupees, you need to invest at least 
+4
+4 rupees.
+
+Test case 
+4
+4: The amount above which you will have to pay taxes is 
+1
+1. Since you earn 
+2
+2 rupees, you need to invest at least 
+1
+1 rupees.
+ANS:
+for _testcase in range(int(input())):
+    a,b = map(int,input().split())
+    print(a-b)
+QN:6
+Masterchef finals
+Chef has been working hard to compete in MasterChef.
+He is ranked 
+𝑋
+X out of all contestants. However, only 
+10
+10 contestants would be selected for the finals.
+
+Check whether Chef made it to the top 
+10
+10 or not?
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of one integers 
+𝑋
+X — the current rank of Chef.
+Output Format
+For each test case, output on a new line, YES, if Chef made it to the top 
+10
+10 and NO otherwise.
+
+Each character of the output may be printed in either uppercase or lowercase. That is, the strings NO, no, nO, and No will be treated as equivalent.
+
+Constraints
+1
+≤
+𝑇
+≤
+100
+1≤T≤100
+1
+≤
+𝑋
+≤
+100
+1≤X≤100
+Sample 1:
+Input
+Output
+4
+15
+10
+1
+50
+NO
+YES
+YES
+NO
+Explanation:
+Test case 
+1
+1: Chef's rank is 
+15
+15 which is greater than 
+10
+10. Thus, Chef did not make it to the top 
+10
+10.
+
+Test case 
+2
+2: Chef's rank is 
+10
+10 which is equal to 
+10
+10. Thus, Chef made it to the top 
+10
+10.
+
+Test case 
+3
+3: Chef made it to the top 
+10
+10, as his rank is 
+1
+1.
+
+Test case 
+4
+4: Chef did not make it to the top 
+10
+10 as his rank is 
+50.
+ANS:
+for _testcase in range(int(input())):
+    a,b = map(int,input().split())
+    print(a-b)
+QN:7
+Biryani classes
+According to a recent survey, Biryani is the most ordered food. Chef wants to learn how to make world-class Biryani from a MasterChef. Chef will be required to attend the MasterChef's classes for 
+𝑋
+X weeks, and the cost of classes per week is 
+𝑌
+Y coins. What is the total amount of money that Chef will have to pay?
+
+Input Format
+The first line of input will contain an integer 
+𝑇
+T — the number of test cases. The description of 
+𝑇
+T test cases follows.
+The first and only line of each test case contains two space-separated integers 
+𝑋
+X and 
+𝑌
+Y, as described in the problem statement.
+Output Format
+For each test case, output on a new line the total amount of money that Chef will have to pay.
+
+Constraints
+1
+≤
+𝑇
+≤
+1
+0
+4
+1≤T≤10 
+4
+ 
+1
+≤
+𝑋
+,
+𝑌
+≤
+100
+1≤X,Y≤100
+Sample 1:
+Input
+Output
+4
+1 10
+1 15
+2 10
+2 15
+10
+15
+20
+30
+Explanation:
+Test case 
+1
+1: Chef will be required to attend the MasterChef's classes for 
+1
+1 week and the cost of classes per week is 
+10
+10 coins. Hence, Chef will have to pay 
+10
+10 coins in total.
+
+Test case 
+2
+2: Chef will be required to attend the MasterChef's classes for 
+1
+1 week and the cost of classes per week is 
+15
+15 coins. Hence, Chef will have to pay 
+15
+15 coins in total.
+
+Test case 
+3
+3: Chef will be required to attend the MasterChef's classes for 
+2
+2 weeks and the cost of classes per week is 
+10
+10 coins. Hence, Chef will have to pay 
+20
+20 coins in total.
+
+Test case 
+4
+4: Chef will be required to attend the MasterChef's classes for 
+2
+2 weeks and the cost of classes per week is 
+15
+15 coins. Hence, Chef will have to pay 
+30
+30 coins in total.
+ANS:
+for _ in range(int(input())):
+    x, y = map(int, input().split())
+    print(x*y)
+QN:8
+Chef Plays Ludo
+Chef is playing Ludo. According to the rules of Ludo, a player can enter a new token into the play only when he rolls a 
+6
+6 on the die.
+
+In the current turn, Chef rolled the number 
+𝑋
+X on the die. Determine if Chef can enter a new token into the play in the current turn or not.
+
+Input Format
+The first line contains a single integer 
+𝑇
+T — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains one integer 
+𝑋
+X — the number rolled by the Chef on the die.
+Output Format
+For each test case, output YES if the Chef can enter a new token in the game. Otherwise, output NO.
+
+You may print each character of YES and NO in uppercase or lowercase (for example, yes, yEs, Yes will be considered identical).
+
+Constraints
+1
+≤
+𝑇
+≤
+6
+1≤T≤6
+1
+≤
+𝑋
+≤
+6
+1≤X≤6
+Sample 1:
+Input
+Output
+3
+1
+6
+3
+NO
+YES
+NO
+Explanation:
+Test Case 1: Since Chef did not roll a 
+6
+6, he can not enter a new token in the play.
+
+Test Case 2: Since Chef rolled a 
+6
+6, he can enter a new token in the play.
+ANS:
+t=int(input())
+for t in range(t):
+    x=int(input())
+    if(x==6):
+        print('yes')
+    else:
+        print("no")
+QN:9
+How many unattempted problems
+CodeChef recently revamped its practice page to make it easier for users to identify the next problems they should solve by introducing some new features:
+
+Recent Contest Problems - contains only problems from the last 2 contests
+Separate Un-Attempted, Attempted, and All tabs
+Problem Difficulty Rating - the Recommended dropdown menu has various difficulty ranges so that you can attempt the problems most suited to your experience
+Popular Topics and Tags
+Our Chef is currently practicing on CodeChef and is a beginner. The count of ‘All Problems’ in the Beginner section is 
+𝑋
+X. Our Chef has already ‘Attempted’ 
+𝑌
+Y problems among them. How many problems are yet ‘Un-attempted’?
+
+Input Format
+The first and only line of input contains two space-separated integers 
+𝑋
+X and 
+𝑌
+Y — the count of 'All problems' in the Beginner's section and the count of Chef's 'Attempted' problems, respectively.
+Output Format
+Output a single integer in a single line — the number of problems that are yet 'Un-attempted'
+
+Constraints
+1
+≤
+𝑌
+≤
+𝑋
+≤
+1000
+1≤Y≤X≤1000
+Subtasks
+Subtask 1 (100 points):
+Original constraints.
+Sample 1:
+Input
+Output
+10 4
+6
+Sample 2:
+Input
+Output
+10 10
+0
+Sample 3:
+Input
+Output
+1000 990
+10
+Sample 4:
+Input
+Output
+500 1
+499
+Explanation:
+Test case 
+1
+1: There are 
+10
+10 problems in total in the Beginner's section, out of which 
+4
+4 have been attempted. Hence, there are 
+6
+6 Un-attempted problems.
+
+Test case 
+2
+2: There are 
+10
+10 problems in total in the Beginner's section, out of which all have been attempted. Hence, there are 
+0
+0 Un-attempted problems.
+
+Test case 
+3
+3: There are 
+1000
+1000 problems in total in the Beginner's section, out of which 
+990
+990 have been attempted. Hence, there are 
+10
+10 Un-attempted problems.
+
+Test case 
+4
+4: There are 
+500
+500 problems in total in the Beginner's section, out of which only 
+1
+1 has been attempted. Hence, there are 
+499
+499 Un-attempted problems.
+ANS:
+a,b=map(int,input().split())
+print(a-b)
+QN:10
+Determine the Score
+Chef appeared for a placement test.
+
+There is a problem worth 
+𝑋
+X points. Chef finds out that the problem has exactly 
+10
+10 test cases. It is known that each test case is worth the same number of points.
+
+Chef passes 
+𝑁
+N test cases among them. Determine the score Chef will get.
+
+NOTE: See sample explanation for more clarity.
+
+Input Format
+First line will contain 
+𝑇
+T, number of test cases. Then the test cases follow.
+Each test case contains of a single line of input, two integers 
+𝑋
+X and 
+𝑁
+N, the total points for the problem and the number of test cases which pass for Chef's solution.
+Output Format
+For each test case, output the points scored by Chef.
+
+Constraints
+1
+≤
+𝑇
+≤
+100
+1≤T≤100
+10
+≤
+𝑋
+≤
+200
+10≤X≤200
+0
+≤
+𝑁
+≤
+10
+0≤N≤10
+𝑋
+X is a multiple of 
+10
+10.
+Sample 1:
+Input
+Output
+4
+10 3
+100 10
+130 4
+70 0
+3
+100
+52
+0
+Explanation:
+Test Case 
+1
+1: The problem is worth 
+10
+10 points and since there are 
+10
+10 test cases, each test case is worth 
+1
+1 point. Since Chef passes 
+3
+3 test cases, his score will be 
+1
+⋅
+3
+=
+3
+1⋅3=3 points.
+
+Test Case 
+2
+2: The problem is worth 
+100
+100 points and since there are 
+10
+10 test cases, each test case is worth 
+10
+10 points. Since Chef passes all the 
+10
+10 test cases, his score will be 
+10
+⋅
+10
+=
+100
+10⋅10=100 points.
+
+Test Case 
+3
+3: The problem is worth 
+130
+130 points and since there are 
+10
+10 test cases, each test case is worth 
+13
+13 points. Since Chef passes 
+4
+4 test cases, his score will be 
+13
+⋅
+4
+=
+52
+13⋅4=52 points.
+
+Test Case 
+4
+4: The problem is worth 
+70
+70 points and since there are 
+10
+10 test cases, each test case is worth 
+7
+7 points. Since Chef passes 
+0
+0 test cases, his score will be 
+7
+⋅
+0
+=
+0
+7⋅0=0 points.
+ANS:
+for _ in range(int(input())):
+    X,N = map(int,input().split())
+    t=X//10
+    print(N*t)
+    
+
+
+
